@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デモ　ユーザ登録画面</title>
+</head>
+<body>
+    <h1>デモ　掲示板一覧</h1>
+
+    <h3>お題【PHPの勉強ってどうやってますか？】</h3>
+
+    <form action="user_regist.php" method="post">
+    <label>キーワード検索:</label>
+    <input type="text" name="key">
+    <input type="submit" value="検索">
+    </form>
+    <br>
+
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>ユーザ</th>
+                <th>コメント</th>
+            </tr>
+        </thead> 
+        <tbody>
+###loop###
+            <tr>
+                <td>$$$id$$$</td>
+                <td>$$$user_id$$$</td>
+                <td>$$$comment$$$</td>
+            </tr>
+###/loop###
+        </tbody>
+    </table>
+
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿# A5:ER FORMAT:14
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright (C)2007 m.matsubara
+# A5:SQL Mk-2 Copyright (C)1997 m.matsubara
+#  https://a5m2.mmatsubara.com
+
+[Manager]
+ProjectName=login
+Author=
+MaxEntityRowShow=1000
+ReadOnlyRecommend=0
+Page=Main
+PageInfo="Main",5,"A3Landscape",$FFFFFF
+LogicalView=1
+DecodeDomain=0
+ViewModePageIndividually=1
+ViewMode=5
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=Tahoma
+FontSize=6
+PaperSize=A4Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+RDBMSType=5
+RDBMSTypeName=MySQL
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+SqlSeparator=0
+UpperCaseKeyword=0
+ShowTag=1
+ShowCommonAttributes=0
+
+[Entity]
+PName=login
+LName=login
+Comment=
+TableOption=
+Page=MAIN
+Left=200
+Top=250
+Field="ID","id","int(11)","NOT NULL",0,"","",$FFFFFFFF,"auto_increment"
+Field="ユーザID","user_id","varchar(255)","NOT NULL",,"","",$FFFFFFFF,""
+Field="パスワード","password","varchar(255)","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20220326222016
+Position="MAIN",200,250,413,129
+ZOrder=1
+
+[Entity]
+PName=displayusers
+LName=表示ユーザ
+Comment=
+TableOption=
+Page=MAIN
+Left=1000
+Top=250
+Field="ユーザID","id","int(11)","NOT NULL",0,"","",$FFFFFFFF,""
+Field="コメント","comment","varchar(255)","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20220326222855
+Position="MAIN",1000,250,383,122
+ZOrder=2
+
+[Relation]
+Entity1=login
+Entity2=displayusers
+RelationType1=2
+RelationType2=1
+Fields1=id
+Fields2=id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1113,8887,1177,R,R,""
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20220326222901
+LineMode=0
+Bar1=111
+Bar2=889
+Bar3=118
+TermPos1=R
+TermPos2=R
+ZOrder=3
